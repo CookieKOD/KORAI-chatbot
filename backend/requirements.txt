@@ -1,0 +1,17 @@
+fastapi>=0.104.0,<0.105.0
+flask
+uvicorn
+langchain
+langchain-community
+chromadb
+sentence-transformers
+mistralai
+python-dotenv
+PyPDF2
+torch
+torchvision
+pillow
+python-jose[cryptography]
+passlib[bcrypt]
+langchain_mistralai
+python-multipart
