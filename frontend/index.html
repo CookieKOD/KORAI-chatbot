@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KORAI ORL</title>
+
+  <!-- React + ReactDOM (CDN) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel pour compiler le JSX dans le navigateur -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- jsPDF + AutoTable pour les PDF téléchargeables -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.0/jspdf.plugin.autotable.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body, #root {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #F3F4F6;
+      color: #1F2937;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!--
+    IMPORTANT : l'ordre est crucial.
+    shared.jsx définit window.API, window.COLORS, etc. → DOIT être chargé en premier.
+    App.jsx utilise tous les autres composants → DOIT être chargé en dernier.
+  -->
+  <script type="text/babel" data-presets="react" src="shared.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Onboarding.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Login.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Layout.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Dashboard.jsx"></script>
+  <script type="text/babel" data-presets="react" src="NewConsultation.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Reports.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Chatbot.jsx"></script>
+  <script type="text/babel" data-presets="react" src="Profile.jsx"></script>
+  <script type="text/babel" data-presets="react" src="App.jsx"></script>
+</body>
+</html>
